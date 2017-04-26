@@ -102,7 +102,7 @@ function addProduct() {
         if(isNaN(proNum)) {
             proNum = 1;
 
-        //proNum是数字
+            //proNum是数字
         } else {
 
             //限制一次只能购买9件商品
@@ -294,6 +294,9 @@ function showPage(data) {
     //计算一共有多少页商品咨询信息
     var totalPage = Math.ceil(data / config.advisoryAmount);
 
+    //显示商品咨询的条数
+    $(".appra-num").html(data);
+
     //计算当前显示的是第几页商品咨询信息
     var pageIndex = (config.advisoryStartIndex + config.advisoryAmount) / config.advisoryAmount;
 
@@ -305,7 +308,7 @@ function showPage(data) {
         //不能点击上一页按钮
         tag += "<span class='page-prev'>&lt;&lt;上一页</span>";
 
-    //如果当前展示的不是第1页的商品咨询信息
+        //如果当前展示的不是第1页的商品咨询信息
     } else {
 
         //能点击上一页按钮
@@ -327,7 +330,7 @@ function showPage(data) {
         //不能点击下一页按钮
         tag += "<span class='page-next'>下一页&gt;&gt;</span>";
 
-    //如果当前展示的不是最后一页的商品咨询信息
+        //如果当前展示的不是最后一页的商品咨询信息
     } else {
 
         //可以点击下一页按钮
