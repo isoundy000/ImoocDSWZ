@@ -1,13 +1,13 @@
 /**
  * Created by Administrator on 2017/3/31.
- * ¹ºÎï³µºÍ½áËãÒ³µÄCSSÑùÊ½
+ * è´­ç‰©è½¦é¡µçš„CSSæ ·å¼
  */
 
 .header {
     margin-bottom: 12px;
 }
 
-/* ¹ºÎï½ø¶È */
+/* è´­ç‰©è¿›åº¦ */
 .shop-progress {
     margin-top: 25px;
     margin-right: 32px;
@@ -18,7 +18,7 @@
     margin-left: 22px;
 }
 
-/* ¹ºÎï½ø¶ÈÖĞµÄĞ¡Ô²È¦ */
+/* è´­ç‰©è¿›åº¦ä¸­çš„å°åœ†ç‚¹ */
 .shop-progress .circle {
     width: 18px;
     height: 18px;
@@ -30,7 +30,7 @@
     float: left;
 }
 
-/* Ğ¡Ô²È¦Ö®¼äµÄÁ¬Ïß */
+/* å°åœ†ç‚¹ä¹‹é—´çš„è¿çº¿ */
 .shop-progress .line {
     width: 150px;
     height: 3px;
@@ -59,7 +59,7 @@
 }
 
 
-/* ÊÕ»õĞÅÏ¢ */
+/* æ”¶è´§ä¿¡æ¯ */
 .receive-info {
     border: solid 1px #CCCCCC;
 }
@@ -90,7 +90,7 @@
     float: left;
 }
 
-/* ĞÂºÅ */
+/* æ˜Ÿå· */
 .row .xing {
     margin-top: 3px;
     margin-right: 8px;
@@ -106,7 +106,7 @@
     float: left;
 }
 
-/* ×Ô¶¨Òåselect¿Ø¼ş */
+/* è‡ªå®šä¹‰selectæ ‡ç­¾ */
 .row .select {
     margin-right: 10px;
 }
@@ -136,7 +136,7 @@
     overflow: hidden;
 }
 
-/* ÊÕ»õÈËµØÖ·ÊäÈë¿ò */
+/* è¾“å…¥æ”¶è´§åœ°å€çš„inputæ ‡ç­¾ */
 .input-address {
     width: 373px;
     height: 22px;
@@ -172,7 +172,7 @@
     top: 5px;
 }
 
-/* ÊÕ»õÈËĞÕÃûÊäÈë¿ò */
+/* è¾“å…¥æ”¶è´§äººçš„inputæ ‡ç­¾ */
 .input-receiver {
     width: 373px;
     height: 22px;
@@ -183,7 +183,7 @@
     left: 2px;
 }
 
-/* ÊÖ»úºÅÂëÊäÈë¿ò */
+/* è¾“å…¥æ‰‹æœºå·ç çš„inputæ ‡ç­¾ */
 .input-phone {
     width: 373px;
     height: 22px;
@@ -203,7 +203,7 @@
     font-size: 14px;
 }
 
-/* ÇøºÅÊäÈë¿ò */
+/* è¾“å…¥åŒºå·çš„inputæ ‡ç­¾ */
 .input-area {
     width: 52px;
     height: 22px;
@@ -215,7 +215,7 @@
     left: 1px;
 }
 
-/* µç»°ºÅÂëÊäÈë¿ò */
+/* è¾“å…¥ç”µè¯å·ç çš„inputæ ‡ç­¾ */
 .input-tel {
     width: 87px;
     height: 22px;
@@ -227,7 +227,7 @@
     left: 1px;
 }
 
-/* ·Ö»úºÅÊäÈë¿ò */
+/* è¾“å…¥åˆ†æœºå·çš„inputæ ‡ç­¾ */
 .input-extension {
     width: 90px;
     height: 22px;
@@ -239,7 +239,7 @@
     left: 1px;
 }
 
-/* È·ÈÏÊÕ»õµØÖ·°´Å¥ */
+/* ç¡®è®¤æ”¶è´§åœ°å€æŒ‰é’® */
 .button-submit {
     width: 112px;
     height: 27px;
@@ -252,7 +252,7 @@
     cursor: pointer;
 }
 
-/* Ö§¸¶·½Ê½ */
+/* æ”¯ä»˜æ–¹å¼ */
 .pay-way {
     margin-top: 20px;
     border: solid 1px #CCCCCC;
@@ -279,7 +279,6 @@
     margin-bottom: 26px;
 }
 
-/* Î¢ĞÅÖ§¸¶ */
 .pay-content .row input {
     float: left;
 }
@@ -305,12 +304,12 @@
     float: left;
 }
 
-/* »õµ½¸¶¿î */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .cash-label {
     margin-right: 18px;
 }
 
-/* ·¢Æ±ĞÅÏ¢ */
+/* å‘ç¥¨ä¿¡æ¯ */
 .invoice-info {
     margin-top: 20px;
     border: solid 1px #CCCCCC;
@@ -392,21 +391,21 @@
     cursor: pointer;
 }
 
-/* ±£´æ°´Å¥ */
+/* ä¿å­˜å‘ç¥¨ä¿¡æ¯æŒ‰é’® */
 .invoice-content .button .save {
     color: #ffffff;
     background-color: #4391FC;
     border: solid 1px #3784ED;
 }
 
-/* È¡Ïû°´Å¥ */
+/* å–æ¶ˆä¿å­˜å‘ç¥¨ä¿¡æ¯æŒ‰é’® */
 .invoice-content .button .cancel {
     color: #000;
     background-color: #F6F6F6;
     border: solid 1px #CCCCCC;
 }
 
-/* ËÍ»õÇåµ¥ */
+/* æ”¶è´§æ¸…å• */
 .delivery-info {
     margin-top: 20px;
     border: solid 1px #ccc;
@@ -452,27 +451,23 @@
     float: left;
 }
 
-/* ÉÌÆ·Ãû³Æ */
-.first-row .proName {
 
-}
-
-/* µ¥¼Û */
+/* å•ä»· */
 .first-row .unit-price {
     margin-left: 393px;
 }
 
-/* ·µÏÖ */
+/* è¿”ç° */
 .first-row .cashback {
     margin-left: 112px;
 }
 
-/* ÊıÁ¿ */
+/* æ•°é‡ */
 .first-row .proNum {
     margin-left: 112px;
 }
 
-/* Ğ¡¼Æ */
+/* å°è®¡ */
 .first-row .subtotal {
     margin-left: 112px;
 }
@@ -567,17 +562,17 @@
     bottom: -2px;
 }
 
-/* ÉÌÆ·ĞÅÏ¢ */
+/* å•†å“ä¿¡æ¯ */
 .delivery-bottom .product-info {
     margin-bottom: 12px;
 }
 
-/* ÉÌÆ·Í¼Æ¬ */
+/* å•†å“ä¿¡æ¯ */
 .product-info .product-image {
     float: left;
 }
 
-/* ÉÌÆ·ÃèÊö */
+/* å•†å“æè¿° */
 .product-info .product-des {
     margin-left: 10px;
     font-size: 14px;
@@ -585,17 +580,17 @@
     float: left;
 }
 
-/* ÉÌÆ·Ãû³Æ */
+/* å•†å“åç§° */
 .product-info .product-name {
     margin-bottom: 10px;
 }
 
-/* ÉÌÆ·ÊıÁ¿ */
+/* å•†å“æ•°é‡ */
 .product-info .product-num {
     margin-bottom: 10px;
 }
 
-/* ÉÌÆ·¼Û¸ñ */
+/* å•†å“ä»·æ ¼ */
 .product-info .product-price {
     font-size: 12px;
 }
@@ -604,7 +599,7 @@
     color: #D70000;
 }
 
-/* ¶©µ¥½áËã */
+/* è®¢å•ç»“ç®— */
 .order-sett {
     margin-top: 20px;
     border: solid 1px #ccc;
@@ -629,7 +624,7 @@
     float: right;
 }
 
-/* ¼Û¸ñ×Ü¼Æ */
+/* æ€»è®¡ */
 .order-sett .total {
     margin-bottom: 16px;
     color: #929292;
@@ -641,7 +636,7 @@
     font-size: 20px;
 }
 
-/* Ìá½»¶©µ¥°´Å¥ */
+/* æäº¤è®¢å• */
 .order-sett .commit {
     width: 165px;
     height: 33px;
