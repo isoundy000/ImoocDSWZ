@@ -4,7 +4,11 @@
  */
 
 .header .inner-c {
-    width: 374px;
+    /*width: 374px;*/
+}
+
+.logoBar .logo {
+    padding-left: 264px;
 }
 
 .logoBar h3 {
