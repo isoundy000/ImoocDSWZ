@@ -5,6 +5,12 @@
 
 $(function() {
 
+    //将网站添加至收藏夹
+    collectionSite();
+
+    //检查用户状态
+    checkUserStatus();
+
     //获得搜索列表
     getSearchList();
 
@@ -13,7 +19,54 @@ $(function() {
 
     //导航栏切换
     changeNav();
+
+    //回到顶部
+    gotoTop();
+
+    //设置购物车上商品的数量
+    setProductNum();
 });
+
+
+//将网站添加至收藏夹
+function collectionSite() {
+    $(".collection").on('click', function () {
+        alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏夹失败，请使用Ctrl+D添加！")
+    });
+}
+
+
+//检查用户状态
+function checkUserStatus() {
+
+    var username = localStorage.getItem("username");
+
+    //如果用户名存在
+    if (username.length >= 3) {
+
+        var tag = '欢迎';
+        tag += '<a class="showUsername" href="javascript:;">' + username + '</a>';
+        tag += '来到慕课网&nbsp;';
+        tag += '<a class="exit" href="javascript:;">[退出]</a>';
+        $(".topbar .rightArea").html(tag);
+
+        //点击退出按钮
+        $(".topbar .exit").on('click', function () {
+            var tag = '欢迎来到慕课网&nbsp;';
+            tag += '<a class="loginLink" href="login.html">[登录]</a>&nbsp;';
+            tag += '<a class="registerLink" href="register.html">[免费注册]</a>';
+            $(".topbar .rightArea").html(tag);
+        });
+
+    //如果用户名不存在
+    } else {
+
+        var tag = '欢迎来到慕课网&nbsp;';
+        tag += '<a class="loginLink" href="login.html">[登录]</a>&nbsp;';
+        tag += '<a class="registerLink" href="register.html">[免费注册]</a>';
+        $(".topbar .rightArea").html(tag);
+    }
+}
 
 
 //获得搜索列表
@@ -183,3 +236,56 @@ function changeNav() {
     });
 }
 
+
+//回到顶部
+function gotoTop() {
+    var goTop = $("goTop");
+
+    var leader = 0;
+    var target = 0;
+    var timer = null;
+
+    //监听浏览器滑动
+    $(window).scroll(function () {
+
+        //如果滑动了浏览器的滑块，显示回到顶部按钮
+        $(document).scrollTop() > 0 ? $("#goTop").show() : $("#goTop").hide();
+
+        //把滑块滑动的距离给起始位置
+        leader = $(document).scrollTop();
+    });
+
+    //个回到顶部按钮添加一个点击事件
+    $("#goTop").on("click", function () {
+
+        clearInterval(timer);
+
+        target = 0;
+
+        timer = setInterval(function()
+        {
+            leader = leader + (target - leader ) / 10;
+
+            //去往页面的某个位置
+            window.scrollTo(0,leader);
+
+            if(leader == target)
+            {
+                clearInterval(timer);
+            }
+        }, 10);
+    });
+}
+
+
+//设置购物车上商品的数量
+function setProductNum() {
+
+    //获得商品的数量
+    var productNum = parseInt(localStorage.getItem('productNum'));
+    if (isNaN(productNum)) {
+        productNum = 1;
+    }
+
+    $(".shopCar .shopNum").text(productNum);
+}

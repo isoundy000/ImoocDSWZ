@@ -34,6 +34,12 @@ $(function() {
 
     //获得商品咨询信息
     getAdvisory();
+
+    //展示商品咨询信息
+    intoAdvisory();
+
+    //保存商品的信息
+    saveProductInfo();
 });
 
 
@@ -102,7 +108,7 @@ function addProduct() {
         if(isNaN(proNum)) {
             proNum = 1;
 
-            //proNum是数字
+        //proNum是数字
         } else {
 
             //限制一次只能购买9件商品
@@ -256,35 +262,22 @@ function zoomProductImg() {
 //展示商品的咨询信息
 var showAdvisory = function(data) {
 
-    var tag = "";
+    var tag = '';
 
     $.each(data, function(index, obj) {
 
-        tag += "<li class='clearfix'><div class='member-info'> <div class='member-image'>";
-
-        //会员头像
-        tag += "<img src='" + obj.memberimage + "' alt=''>";
-
-        //会员账号
-        tag += "</div><p class='member-num'>" + obj.membernum + "</p>";
-
-        //会员等级
-        tag += "<p class='member-grade'>" + obj.membergrade + "</p></div>";
-        tag += "<div class='shop-consult'><div class='top clearfix'><div class='consult-name'>[商品咨询]</div>";
-
-        //商品咨询的时间
-        tag += "<div class='consult-time'>" + obj.time + "</div></div>";
-        tag += "<div class='consult-content'>";
-
-        //商品咨询的问题
-        tag += "<div class='question'>" + obj.question + "</div>";
-        tag += "<div class='answer'>";
-
-        //回答
-        tag += "<span>慕课网回复：</span>" + obj.answer + "<div class='triangle'></div></div></div></div></li>";
+        //实例化商品咨询对象
+        var advisory = new Advisory();
+        advisory.memberImage = obj.memberimage;
+        advisory.memberName =  obj.membernum;
+        advisory.memberGrade = obj.membergrade;
+        advisory.advisoryTime = obj.time;
+        advisory.Question = obj.question;
+        advisory.Answer = obj.answer;
+        tag += advisory.bindDOM();
     });
 
-    $(".consult-list").html(tag);
+    $(".advisory-list").html(tag);
 }
 
 
@@ -308,7 +301,7 @@ function showPage(data) {
         //不能点击上一页按钮
         tag += "<span class='page-prev'>&lt;&lt;上一页</span>";
 
-        //如果当前展示的不是第1页的商品咨询信息
+    //如果当前展示的不是第1页的商品咨询信息
     } else {
 
         //能点击上一页按钮
@@ -330,7 +323,7 @@ function showPage(data) {
         //不能点击下一页按钮
         tag += "<span class='page-next'>下一页&gt;&gt;</span>";
 
-        //如果当前展示的不是最后一页的商品咨询信息
+    //如果当前展示的不是最后一页的商品咨询信息
     } else {
 
         //可以点击下一页按钮
@@ -339,8 +332,8 @@ function showPage(data) {
 
     tag += "</div>";
 
-    $(".consult-box .rate-page").remove();
-    $(".consult-box").append($(tag))
+    $(".advisory-box .rate-page").remove();
+    $(".advisory-box").append($(tag))
 
     //上一页按钮
     $(".page-prev").click(function() {
@@ -393,6 +386,31 @@ function getAdvisory() {
     //发送get请求，获得商品咨询信息的条数
     param = {"flag": 1};
     getData(config.advisoryUrl, 'get', 'jsonp', param, showPage);
+}
+
+
+//展示商品咨询信息
+function intoAdvisory() {
+    var flag = localStorage.getItem('flag');
+    localStorage.setItem('flag', 0);
+
+    if (flag == 1) {
+        window.scrollTo(0, 725);
+        $(".topArea .nav-bar li:eq(1)").addClass("active").siblings("li").removeClass("active");
+        $(".table li:eq(1)").eq($(this).index()).css("display", "block").siblings("li").css("display", "none");
+    }
+}
+
+
+//保存商品的信息
+function saveProductInfo() {
+
+    $('.buy').on('click', function () {
+
+        //获得商品的数量
+        var productNum = $('.product-num').val();
+        localStorage.setItem("productNum", productNum);
+    });
 }
 
 

@@ -1,6 +1,6 @@
 /**
  * Created by Administrator on 2017/3/31.
- * 购物车页的CSS样式
+ * 购物车和结算页的CSS样式
  */
 
 .header {
@@ -18,7 +18,7 @@
     margin-left: 22px;
 }
 
-/* 购物进度中的小圆点 */
+/* 购物进度中的小圆圈 */
 .shop-progress .circle {
     width: 18px;
     height: 18px;
@@ -30,7 +30,7 @@
     float: left;
 }
 
-/* 小圆点之间的连线 */
+/* 小圆圈之间的连线 */
 .shop-progress .line {
     width: 150px;
     height: 3px;
@@ -76,7 +76,7 @@
 }
 
 .receive-content {
-    padding-top: 25px;
+    padding-top: 5px;
     padding-left: 30px;
 }
 
@@ -90,7 +90,7 @@
     float: left;
 }
 
-/* 星号 */
+/* 新号 */
 .row .xing {
     margin-top: 3px;
     margin-right: 8px;
@@ -106,7 +106,7 @@
     float: left;
 }
 
-/* 自定义select标签 */
+/* 自定义select控件 */
 .row .select {
     margin-right: 10px;
 }
@@ -136,7 +136,7 @@
     overflow: hidden;
 }
 
-/* 输入收货地址的input标签 */
+/* 收货人地址输入框 */
 .input-address {
     width: 373px;
     height: 22px;
@@ -145,34 +145,31 @@
     border: solid 1px #C2C2C2;
 }
 
-.delivery-notice {
+.notice-info {
     height: 16px;
     line-height: 16px;
     color: #e22;
-    display: inline-block;
+    display: none;
 }
 
-.delivery-notice .notice-icon {
+.notice-info .notice-icon {
     width: 16px;
     height: 16px;
     vertical-align: top;
     background: url("../images/icon/warning-icon.png") -17px -100px no-repeat;
-    display: none;
-}
-
-.delivery-notice .notice-content {
-    display: none;
+    display: inline-block;
 }
 
 .place .notice-icon {
     display: none;
     background-position: 0px -117px;
+    display: inline-block;
     position: relative;
     left: -9px;
     top: 5px;
 }
 
-/* 输入收货人的input标签 */
+/* 收货人姓名输入框 */
 .input-receiver {
     width: 373px;
     height: 22px;
@@ -183,7 +180,7 @@
     left: 2px;
 }
 
-/* 输入手机号码的input标签 */
+/* 手机号码输入框 */
 .input-phone {
     width: 373px;
     height: 22px;
@@ -203,7 +200,7 @@
     font-size: 14px;
 }
 
-/* 输入区号的input标签 */
+/* 区号输入框 */
 .input-area {
     width: 52px;
     height: 22px;
@@ -215,7 +212,7 @@
     left: 1px;
 }
 
-/* 输入电话号码的input标签 */
+/* 电话号码输入框 */
 .input-tel {
     width: 87px;
     height: 22px;
@@ -227,7 +224,7 @@
     left: 1px;
 }
 
-/* 输入分机号的input标签 */
+/* 分机号输入框 */
 .input-extension {
     width: 90px;
     height: 22px;
@@ -250,6 +247,17 @@
     border-bottom: none;
     color: #fff;
     cursor: pointer;
+    float: left;
+}
+
+.info-text {
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #e4393c;
+    display: none;
+    float: left;
 }
 
 /* 支付方式 */
@@ -279,6 +287,7 @@
     margin-bottom: 26px;
 }
 
+/* 微信支付 */
 .pay-content .row input {
     float: left;
 }
@@ -304,7 +313,7 @@
     float: left;
 }
 
-/* �������� */
+/* 货到付款 */
 .cash-label {
     margin-right: 18px;
 }
@@ -368,10 +377,10 @@
 }
 
 .invoice-content .invoice-name {
-    width: 130px;
+    width: 127px;
     height: 22px;
     line-height: 22px;
-    padding-left: 7px;
+    padding-left: 10px;
     margin-left: 5px;
     border: solid 1px #ccc;
 }
@@ -392,21 +401,27 @@
     cursor: pointer;
 }
 
-/* 保存发票信息按钮 */
+/* 保存按钮 */
 .invoice-content .button .save {
     color: #ffffff;
     background-color: #4391FC;
     border: solid 1px #3784ED;
 }
 
-/* 取消保存发票信息按钮 */
+/* 取消按钮 */
 .invoice-content .button .cancel {
     color: #000;
     background-color: #F6F6F6;
     border: solid 1px #CCCCCC;
 }
 
-/* 收货清单 */
+.invoice-content .notice-text {
+    font-size: 16px;
+    color: #e4393c;
+    display: none;
+}
+
+/* 送货清单 */
 .delivery-info {
     margin-top: 20px;
     border: solid 1px #ccc;
@@ -452,6 +467,10 @@
     float: left;
 }
 
+/* 商品名称 */
+.first-row .proName {
+
+}
 
 /* 单价 */
 .first-row .unit-price {
@@ -474,7 +493,7 @@
 }
 
 .second-row .proImage {
-    margin: 10px 38px 10px 57px;
+    margin: 10px 38px 10px 32px;
     float: left;
 }
 
@@ -484,7 +503,7 @@
 
 .second-row .row-top {
     margin-top: 14px;
-    margin-bottom: 34px;
+    margin-bottom: 18px;
 }
 
 .row-top .proName {
@@ -494,7 +513,7 @@
 }
 
 .row-top .unit-price {
-    margin-left: 34px;
+    margin-left: 86px;
     font-size: 14px;
     color: #666;
     float: left;
@@ -531,7 +550,7 @@
 }
 
 .row-bottom .proNum {
-    margin-left: 432px;
+    margin-left: 436px;
     font-size: 14px;
     color: #666;
     float: left;
@@ -568,7 +587,7 @@
     margin-bottom: 12px;
 }
 
-/* 商品信息 */
+/* 商品图片 */
 .product-info .product-image {
     float: left;
 }
@@ -625,7 +644,7 @@
     float: right;
 }
 
-/* 总计 */
+/* 价格总计 */
 .order-sett .total {
     margin-bottom: 16px;
     color: #929292;
@@ -637,7 +656,7 @@
     font-size: 20px;
 }
 
-/* 提交订单 */
+/* 提交订单按钮 */
 .order-sett .commit {
     width: 165px;
     height: 33px;
@@ -655,18 +674,13 @@
     float: right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.order-notice {
+    height: 33px;
+    line-height: 33px;
+    margin-top: 42px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #E50007;
+    display: none;
+    float: right;
+}

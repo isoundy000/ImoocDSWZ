@@ -7,23 +7,6 @@
     background-color: #f0f0f0;
 }
 
-/* 用户的位置 */
-.userPosition {
-    margin: 25px 0 15px 0;
-    font-size: 0;
-}
-
-.userPosition em,
-.userPosition a,
-.userPosition span,
-.userPosition strong {
-    font-size: 12px;
-}
-
-.userPosition a:hover {
-    text-decoration: underline;
-}
-
 /* 商品描述信息 */
 .description-info {
     background-color: #fff;
@@ -349,6 +332,10 @@
     padding-bottom: 22px;
 }
 
+.product-info .leftArea a:hover {
+    color: #d70057;
+}
+
 .product-info .product-image {
     padding: 18px 0 15px 0;
     text-align: center;
@@ -570,280 +557,22 @@
     color: #65657D;
 }
 
-.comment-middle {
-    padding-bottom: 20px;
-}
-
-.comment-middle .comment-nav {
-    height: 32px;
-    background-color: #F2F2F2;
-}
-
-.comment-middle .comment-navBar {
-    margin-left: 20px;
-}
-
-.comment-middle .comment-navBar li {
-    line-height: 28px;
-    padding: 0 8px;
-    margin-right: 46px;
-    float: left;
-}
-
-.comment-navBar li a {
-    color: #000;
-}
-
-.comment-navBar li.active {
-    background-color:transparent;
-    border-bottom: solid 4px #317EE7;
-}
-
-.comment-navBar li.active a {
-    color: #317EE7;
-}
-
-/* 排序按钮 */
-.scort a {
-    height: 20px;
-    line-height: 20px;
-    margin-top: 5px;
-    padding-left: 6px;
-    border: solid 1px #CDCDCD;
-    border-bottom: none;
-    float: left;
-    position: relative;
-}
-
-/* 排序按钮中的小箭头 */
-.scort a .arrow {
-    width: 11px;
-    height: 12px;
-    margin-left: 5px;
-    margin-right: 6px;
-    background: url("../images/icon/xiangxia.png") center center no-repeat;
-    display: inline-block;
-    position: relative;
-    top: 2px;
-}
-
-.recoScort .new {
-    width: 28px;
-    height: 16px;
-    background: url("../images/icon/new.png") no-repeat;
-    position: absolute;
-    top: -14px;
-    right: 14px;
-}
-
-/* 评论列表 */
-.comment-list {
-    margin: 20px 0 0 40px;
-}
-
-.comment-list .user-list li {
-    margin-bottom: 38px;
-}
-
-.comment-list .user-info {
-    margin-right: 25px;
-    text-align: center;
-    float: left;
-}
-
-/* 用户头像 */
-.user-info .user-image img {
-    width: 35px;
-    height: 35px;
-    border-radius: 15px;
-}
-
-/* 用户账号 */
-.comment-list .user-num {
-    line-height: 20px;
-    text-align: center;
-    color: #77778B;
-}
-
-/* 会员等级 */
-.comment-list .user-level {
-    font-family: "新宋体";
-    text-align: center;
-    color: #77778B;
-}
-
-/* 评论信息 */
-.comment-info {
-    float: left;
-}
-
-.comment-info .top {
-    margin-bottom: 10px;
-}
-
-/* 评论信息中的小星星 */
-.comment-info .star {
-    width: 13px;
-    height: 14px;
-    margin-right: 2px;
-    background: url("../images/star.png") center center no-repeat;
-    float: left;
-}
-
-/* 评分 */
-.comment-info .comment-score {
-    margin-left: 10px;
-    font-family: "宋体", "SimSun";
-    font-weight: bold;
-    color: #000;
-    float: left;
-}
-
-/* 评论的内容 */
-.comment-content {
-    margin-bottom: 5px;
-    font-family: "宋体", "SimSun";
-    color: #777777;
-}
-
-/* “踩”和“顶”*/
-.comment-info a {
-    font-family: "宋体", "SimSun";
-    color: #075B9B;
-}
-
-/* 评论的时间 */
-.comment-time {
-    margin-right: 66px;
-    color: #ABABAB;
-    float: right;
-}
-
-.comment-middle .page {
-    margin: 0 14px 36px 0;
-    float: right;
-}
-
-/* 上一页按钮 */
-.page .pre-page {
-    margin-right: 5px;
-    font-size: 0;
-    float: left;
-}
-
-.pre-page a {
-    height: 23px;
-    padding: 0 11px 0 7px;
-    font: 12px/23px "宋体", "SimSun";
-    border: solid 1px #D9D9D9;
-    color: #D8D8D8;
-    display: inline-block;
-}
-
-.pre-page a span {
-    width: 5px;
-    height: 9px;
-    margin-right: 6px;
-    background: url("../images/icon/pre.png") no-repeat;
-    display: inline-block;
-}
-
-.page .page-list {
-    margin-right: 5px;
-    float: left;
-}
-
-.page-list a {
-    height: 23px;
-    padding: 0 10px 0 8px;
-    font: 12px/23px "宋体", "SimSun";
-    border: solid 1px #D9D9D9;
-    color: #000;
-    display: inline-block;
-}
-
-/* 当前选中的按钮*/
-.page-list a.current {
-    background-color: #E9E9E9;
-    color: #f00;
-}
-
-.page-list a.last {
-    color: #085C9B;
-}
-
-.page-list span {
-    margin: 0 12px 0 5px;
-    color: #667DB7;
-}
-
-/* 下一页按钮 */
-.page .next-page {
-    float: left;
-}
-
-.next-page a {
-    height: 23px;
-    padding: 0 11px 0 7px;
-    font: 12px/23px "宋体", "SimSun";
-    border: solid 1px #D9D9D9;
-    color: #085C9B;
-    display: inline-block;
-}
-
-.next-page a span {
-    width: 5px;
-    height: 9px;
-    margin: 0 12px 0 2px;
-    background: url("../images/icon/next.png") no-repeat;
-    display: inline-block;
-}
-
-.change-page {
-    margin-left: 8px;
-    float: left;
-}
-
-/* 输入页数 */
-.change-page .input-page {
-    width: 28px;
-    height: 23px;
-    line-height: 23px;
-    margin: 0 6px 0 7px;
-    text-align: center;
-    border: solid 1px #D3D3D3;
-    color: #666666;
-}
-
-/* 确定按钮 */
-.change-page .button {
-    width: 37px;
-    height: 25px;
-    line-height: 25px;
-    margin-left: 12px;
-    text-align: center;
-    background-color: #D6D6D6;
-    border: solid 1px #707070;
-    cursor: pointer;
-}
-/* 翻页 e */
-
 /* 商品咨询 */
-.consult-box {
+.advisory-box {
     width: 785px;
     margin-top: 15px;
     padding-bottom: 20px;
     background-color: #fff;
 }
 
-.consult-title {
+.advisory-title {
     width: 100%;
     height: 33px;
     margin-bottom: 10px;
     border-bottom: solid 1px #0688BA;
 }
 
-.consult-title .all, .consult-title .send {
+.advisory-title .all, .advisory-title .send {
     width: 132px;
     height: 32px;
     font: 12px/32px "微软雅黑", "microsoft yahei";
@@ -853,19 +582,19 @@
     float: left;
 }
 
-.consult-title a {
+.advisory-title a {
     color: #0688BA;
 }
 
 /* 发表咨询 */
-.consult-title .send {
+.advisory-title .send {
     margin-right: 26px;
     border: none;
     text-align: right;
     float: right;
 }
 
-.consult-box .notice {
+.advisory-box .notice {
     width: 734px;
     line-height: 24px;
     padding: 5px 0 5px 20px;
@@ -875,11 +604,11 @@
 }
 
 /* 咨询列表 */
-.consult-list {
+.advisory-list {
     margin-left: 67px;
 }
 
-.consult-list li {
+.advisory-list li {
     margin-bottom: 38px;
 }
 
@@ -889,19 +618,19 @@
     float: left;
 }
 
-/* 会员账号 */
-.member-num, .member-grade {
+/* 会员名称 */
+.member-name, .member-grade {
     height: 18px;
     color: #777777;
 }
 
 /* 商品咨询 */
-.shop-consult {
+.shop-advisory {
     margin-left: 34px;
     float: left;
 }
 
-.shop-consult .top {
+.shop-advisory .top {
     width: 540px;
     height: 19px;
     line-height: 19px;
@@ -915,7 +644,7 @@
     display: inline-block;
 }
 
-.consult-name {
+.advisory-name {
     font-size: 14px;
     color: #000;
     font-weight: bold;
@@ -923,14 +652,14 @@
 }
 
 /* 咨询的时间 */
-.consult-time {
+.advisory-time {
     font-family: "宋体", "SimSun";
     color: #ABABAB;
     float: right;
 }
 
 /* 提问 */
-.consult-content .question {
+.advisory-content .question {
     margin-bottom: 13px;
     font-family: "宋体", "SimSun";
     color: #777777;
@@ -968,9 +697,13 @@
 }
 
 
-.consult-box .page {
+.advisory-box .page {
     margin-right: 62px;
     float: right;
+}
+
+.advisory-box .rate-page {
+    margin-left: 145px;
 }
 
 .rate-paginator {

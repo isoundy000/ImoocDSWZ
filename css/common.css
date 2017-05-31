@@ -33,13 +33,16 @@
     background: url("../images/icon/collection.jpg") left center no-repeat;
 }
 
-/* 登录和免费注册 */
-.loginLink:hover, .registerLink:hover {
+.topbar .leftArea a {
+    font-weight: bold;
+}
+
+.topbar .rightArea a:hover {
     color: #C81623;
 }
 
-.topbar .leftArea a {
-    font-weight: bold;
+.topbar .rightArea .showUsername {
+    color: #C81623;
 }
 
 .header .logoBar {
@@ -330,6 +333,41 @@
     background-color: #ff7700;
 }
 /* banner部分 e */
+
+/* 用户的位置 s */
+.userPosition {
+    margin: 25px 0 15px 0;
+    font-size: 0;
+}
+
+.userPosition em,
+.userPosition a,
+.userPosition span,
+.userPosition strong {
+    font-size: 12px;
+    color: #000;
+}
+
+.userPosition a:hover {
+    text-decoration: underline;
+}
+/* 用户的位置 e */
+
+/* 回到顶部按钮 */
+.goTop {
+    width: 68px;
+    height: 29px;
+    background: url(../images/top.png) no-repeat left bottom;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 75px;
+    display: none;
+}
+
+.goTop:hover {
+    background-position: left top;
+}
 
 
 

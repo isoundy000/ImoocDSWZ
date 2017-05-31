@@ -6,6 +6,8 @@
     <title>电商网站的注册页</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
     <link rel="stylesheet" type="text/css" href="css/register.css"/>
 </head>
 <body>
@@ -35,60 +37,93 @@
     </header>
     <!-- 头部 e -->
 
+    <div class="show-result">
+    </div>
+
     <!-- 注册 s -->
     <section class="registerBox">
-        <form action="save.php">
+        <form>
             <ul class="register">
-                <li>
-                    <div class="register-item">
-                        <i>*</i>
-                        用户名：
+                <li class="username">
+                    <div class="item-content clearfix">
+                        <div class="register-item">
+                            <i>*</i>
+                            用户名：
+                        </div>
+                        <div class="input-item">
+                            <input class="icon-username input-username" type="text" data-class="username"/>
+                        </div>
                     </div>
-                    <div class="input-item">
-                        <input class="icon-use" type="text" placeholder="邮箱/用户名/手机号"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="register-item">
-                        <i>*</i>
-                        请确认密码：
-                    </div>
-                    <div class="input-item">
-                        <input class="icon-password" type="password"/>
+                    <div class="tips">3~15个字符，可使用字母、数字、下划线，需以字母开头</div>
+                    <div class="notice-info">
+                        <span class="notice-icon"></span>
+                        <span class="notice-content"></span>
                     </div>
                 </li>
-                <li>
-                    <div class="register-item">
-                        <i>*</i>
-                        请设置密码：
+                <li class="password">
+                    <div class="item-content clearfix">
+                        <div class="register-item">
+                            <i>*</i>
+                            密码：
+                        </div>
+                        <div class="input-item">
+                            <input class="icon-password input-password" type="password" data-class="password"/>
+                        </div>
                     </div>
-                    <div class="input-item">
-                        <input class="icon-password" type="password"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="register-item">
-                        <i>*</i>
-                        邮箱：
-                    </div>
-                    <div class="input-item">
-                        <input type="text"/>
+                    <div class="tips">6~16个字符，区分大小写</div>
+                    <div class="notice-info">
+                        <span class="notice-icon"></span>
+                        <span class="notice-content"></span>
                     </div>
                 </li>
-                <li>
-                    <div class="register-item">
+                <li class="password-again">
+                    <div class="item-content clearfix">
+                        <div class="register-item">
+                            <i>*</i>
+                            确认密码：
+                        </div>
+                        <div class="input-item">
+                            <input class="icon-password input-password-again" type="password" data-class="password-again"/>
+                        </div>
                     </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="agree"/>
-                        <label for="agree">我已阅读并同意</label>
-                        <a href="javascript:;">《用户注册协议》</a>
+                    <div class="tips">请再次填写密码</div>
+                    <div class="notice-info">
+                        <span class="notice-icon"></span>
+                        <span class="notice-content"></span>
                     </div>
                 </li>
-                <li>
-                    <div class="register-item">
+                <li class="email">
+                    <div class="item-content clearfix">
+                        <div class="register-item">
+                            <i>*</i>
+                            邮箱：
+                        </div>
+                        <div class="input-item">
+                            <input type="text" class="input-email" data-class="email"/>
+                        </div>
                     </div>
-                    <div class="submit-item">
-                        <input type="submit" value=""/>
+                    <div class="tips">填写您的邮箱</div>
+                    <div class="notice-info">
+                        <span class="notice-icon"></span>
+                        <span class="notice-content"></span>
+                    </div>
+                </li>
+                <li class="clause">
+                    <div class="item-content clearfix">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="agree"/>
+                            <label for="agree">我已阅读并同意</label>
+                            <a href="javascript:;">《用户注册协议》</a>
+                        </div>
+                        <div class="notice-info">
+                            <span class="notice-icon"></span>
+                            <span class="notice-content"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="submit">
+                    <div class="item-content">
+                        <input type="button" value="立即注册" class="buttonRegister"/>
                     </div>
                 </li>
             </ul>
@@ -133,5 +168,10 @@
     </footer>
     <!-- 脚部 e -->
 
+    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

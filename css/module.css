@@ -64,9 +64,8 @@
 
 /* 翻页标签 s */
 .rate-page {
-    margin-right: 30px;
     font-family: tahoma,arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
-    text-align: right;
+    text-align: center;
     font-size: 0;
 }
 
@@ -75,14 +74,17 @@
     border-width: 1px;
 }
 
-.rate-page a, .rate-page span {
+.rate-page a,
+.rate-page span {
     height: 27px;
     line-height: 27px;
     padding: 5px 14px;
+    margin-right: 5px;
     color: #2953a6;
+    background-color: #fff;
     font-size: 14px;
     border: 1px solid #e5e5e5;
-    border-width: 1px 1px 1px 0;
+    border-width: 1px 1px 1px 1px;
     vertical-align: top;
     display: inline-block;
     moz-user-select: -moz-none;
@@ -95,11 +97,70 @@
 }
 
 .rate-page span {
-    color: #999;
+    color: #fff;
+    background-color: #f40;
 }
 
-.rate-page a:hover {
+.rate-page span.page-prev,
+.rate-page span.page-next {
+    color: #ccc;
     background-color: #efefef;
 }
 
+
+.rate-page a:hover {
+    color: #f40;
+    border: solid 1px #f40;
+}
+
 /* 翻页标签 e */
+
+/* 展示验证的结果 s */
+
+.show-result {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff6d28;
+    display: none;
+    position: relative;
+}
+
+.show-result .time {
+    color: #000;
+}
+
+.show-result .close-btn {
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    margin-left: 274px;
+    background: #f86621;
+    border-radius: 2px;
+    vertical-align: text-bottom;
+    font-size: 18px;
+    color: #ffcbb3;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 7px;
+}
+
+.show-result .close-btn:hover {
+    background: #f75e15;
+    color: #fcd8c7;
+}
+
+.show-result .close-btn i::before {
+    content: "\f00d";
+}
+
+/* 展示验证的结果 e */
